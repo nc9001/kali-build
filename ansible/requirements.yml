@@ -1,13 +1,2 @@
----
-- name: "Customizing kali"
-  hosts: localhost
-  connection: local
-  roles:
-    - role: gantsign.visual-studio-code
-      users:
-        - username: "{{ ansible_user_id }}" 
-          visual_studio_code_extensions:
-            - streetsidesoftware.code-spell-checker
-            - ms-python.python
-            - DEVSENSE.phptools-vscode
-    - role: gantsign.terminator
+- src: gantsign.visual-studio-code
+- src: gantsign.terminator
